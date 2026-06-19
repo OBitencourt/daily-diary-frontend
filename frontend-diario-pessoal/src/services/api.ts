@@ -1,7 +1,7 @@
 import axios from 'axios';
 import type { InternalAxiosRequestConfig }  from 'axios'
 const api = axios.create({
-  baseURL: 'https://daily-diary-backend-blush.vercel.app//api',
+  baseURL: 'https://daily-diary-backend-blush.vercel.app/api',
 });
 
 const getCookie = (name: string): string | undefined => {
