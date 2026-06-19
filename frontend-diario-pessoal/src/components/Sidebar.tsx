@@ -2,9 +2,7 @@ import React from 'react';
 import { 
   Home, 
   Calendar, 
-  LogOut, 
-  BookOpen, 
-  BarChart2,
+  LogOut,
   Heart
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
@@ -17,12 +15,6 @@ const Sidebar: React.FC = () => {
     { icon: <Calendar size={22} />, label: 'Calendário', active: false },
   ];
 
-  const categories = [
-    { label: 'Trabalho', color: 'bg-emerald-400' },
-    { label: 'Educação', color: 'bg-amber-400' },
-    { label: 'Família', color: 'bg-rose-400' },
-    { label: 'Pessoal', color: 'bg-sky-400' },
-  ];
 
   return (
     <aside className="w-72 bg-white border-r border-slate-100 flex flex-col h-screen sticky top-0">
