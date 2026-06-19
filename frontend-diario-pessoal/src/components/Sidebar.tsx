@@ -15,8 +15,6 @@ const Sidebar: React.FC = () => {
   const menuItems = [
     { icon: <Home size={22} />, label: 'Dashboard', active: true },
     { icon: <Calendar size={22} />, label: 'Calendário', active: false },
-    { icon: <BarChart2 size={22} />, label: 'Estatísticas', active: false },
-    { icon: <BookOpen size={22} />, label: 'Memórias', active: false },
   ];
 
   const categories = [
@@ -29,7 +27,7 @@ const Sidebar: React.FC = () => {
   return (
     <aside className="w-72 bg-white border-r border-slate-100 flex flex-col h-screen sticky top-0">
       <div className="p-8 flex items-center gap-3">
-        <div className="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary-200">
+        <div className="w-10 h-10 bg-zinc-800 rounded-md flex items-center justify-center text-white ">
           <Heart size={24} fill="currentColor" />
         </div>
         <span className="text-2xl font-black text-slate-800 tracking-tight">Sentia</span>
@@ -51,20 +49,6 @@ const Sidebar: React.FC = () => {
                 >
                   {item.icon}
                   <span>{item.label}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <p className="px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Categorias</p>
-          <ul className="space-y-2">
-            {categories.map((cat, index) => (
-              <li key={index}>
-                <a href="#" className="flex items-center gap-4 px-4 py-2 rounded-xl text-slate-500 hover:bg-slate-50 transition-all font-medium">
-                  <div className={`w-2 h-2 rounded-full ${cat.color}`}></div>
-                  <span>{cat.label}</span>
                 </a>
               </li>
             ))}
